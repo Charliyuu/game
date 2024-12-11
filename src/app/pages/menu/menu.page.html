@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>MENU</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-container">
+    <!-- Imagen Izquierda -->
+    <img src="assets/img/lampara.png" class="side-image" alt="Lámpara Izquierda" />
+
+    <!-- Contenedor de Botones -->
+    <div class="center-buttons">
+      <ion-button routerLink="/historia" class="boton-personalizado" aria-label="Ir a Historia">HISTORIA</ion-button>
+      <ion-button routerLink="/personajes" class="boton-personalizado" aria-label="Ir a Personajes">PERSONAJES</ion-button>
+      <ion-button routerLink="/galeria" class="boton-personalizado" aria-label="Ir a Galeria">GALERIA</ion-button>
+    </div>
+
+    <!-- Imagen Derecha -->
+    <img src="assets/img/lampara.png" class="side-image" alt="Lámpara Derecha" />
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- Botón a la izquierda: Regresar -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Atras">
+        <ion-icon slot="start" name="arrow-back"></ion-icon> 
+        Atras
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PERSONAJES</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >  <!-- contenedor donde se mandan llamar los datos de la coleccion de personajes -->
+    <ion-card *ngFor="let personaje of personajes"  (click)="verDetalle(personaje.id)">
+      <img [src]="'assets/img/' + personaje.imagen + '.png'" [alt]="personaje.nombre" />
+      <ion-card-header>
+        <ion-card-title class="description-text">{{ personaje.nombre }}</ion-card-title>
+      </ion-card-header>
+      
+  
+    </ion-card>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- Botón a la izquierda: Regresar -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+      text="atras">
+        <ion-icon slot="start" name="arrow-back"></ion-icon> 
+        Atras
+      </ion-back-button>
+    </ion-buttons>
+
+    <!-- Título central (opcional) -->
+    <ion-title>PERSONAJES</ion-title>
+
+    <!-- Botón a la derecha: Navegar a otra página -->
+    <ion-buttons slot="end">
+      <ion-button routerLink="/galeria">
+        <ion-icon slot="start" name="arrow-forward"></ion-icon>
+        siguiente
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-footer>
+

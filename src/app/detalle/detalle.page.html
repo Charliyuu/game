@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ personaje.nombre }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="regresar()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content *ngIf="personaje">
+  <ion-card>
+    <ion-card-header>
+      <img [src]="'assets/img/' + personaje.imagen + '.png'" [alt]="personaje.nombre" />
+      <ion-card-title>{{ personaje.nombre }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Descripción:</strong> {{ personaje.descripcion }}</p>
+      <p><strong>Salud:</strong> {{ personaje.salud }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,58 @@
+/* menu.page.scss */
+
+/* Contenedor principal con Flexbox */
+.content-container {
+    display: flex;
+    flex-direction: row; /* Disposición horizontal */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Ocupa toda la altura disponible */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye padding en el cálculo del tamaño */
+  }
+  
+  /* Contenedor de botones */
+  .center-buttons {
+    display: flex;
+    flex-direction: column; /* Botones en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    gap: 15px; /* Espaciado entre botones */
+    margin: 0 20px; /* Espaciado lateral entre botones y imágenes */
+  }
+  
+  /* Estilos personalizados para los botones */
+  .boton-personalizado {
+    width: 200px; /* Ancho fijo (ajustable) */
+    max-width: 300px; /* Ancho máximo para pantallas grandes */
+    padding: 12px 0; /* Padding vertical */
+    font-size: 16px; /* Tamaño del texto */
+  }
+  
+  /* Estilos para las imágenes laterales */
+  .side-image {
+    width: 100px; /* Ancho fijo de la imagen (ajustable) */
+    max-width: 150px; /* Ancho máximo para pantallas grandes */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column; /* Disposición vertical en pantallas pequeñas */
+    }
+  
+    .center-buttons {
+      margin: 20px 0; /* Espaciado vertical entre botones y imágenes */
+    }
+  
+    .side-image {
+      width: 80px; /* Ancho reducido en pantallas pequeñas */
+      max-width: 120px;
+    }
+  
+    .boton-personalizado {
+      width: 80%; /* Ancho proporcional en pantallas pequeñas */
+    }
+  }
+ 

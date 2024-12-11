@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>GALERIA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Galería de Imágenes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" size-md="3" *ngFor="let img of imagenes">
+          <ion-img [src]="img" ></ion-img>
+         
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <!-- Botón a la izquierda: Regresar -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+      text="atras">
+        <ion-icon slot="start" name="arrow-back"></ion-icon> 
+        Atras
+      </ion-back-button>
+    </ion-buttons>
+
+    <!-- Título central (opcional) -->
+    <ion-title>GALERIA</ion-title>
+
+  </ion-toolbar>
+
+</ion-footer>
+<style>
+ion-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+ion-img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+</style>

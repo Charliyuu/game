@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>HISTORIA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="description-container">
+    <h2 class="description-text">“CURSED CEMETERY”, un juego inspirado en una historia de un pueblo poseído por las fuerzas del mal, el cual deberá ser liberado por un sacerdote que deberá luchar para salvar a ese pueblo de la maldición que lo mantiene bajo las sombras,"Cursed Cemetery" es un videojuego de terror y aventura diseñado para un público juvenil. Combina una narrativa inmersiva con elementos de misterio, exploración y sustos estratégicos.</h2>
+  </div>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="auto">
+        <img src="assets/img/GAME.png" class="custom-image" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- Botón a la izquierda: Regresar -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+      text="atras">
+        <ion-icon slot="start" name="arrow-back"></ion-icon> 
+        Atras
+      </ion-back-button>
+    </ion-buttons>
+
+    <!-- Título central (opcional) -->
+    <ion-title>HISTORIA</ion-title>
+
+    <!-- Botón a la derecha: Navegar a otra página -->
+    <ion-buttons slot="end">
+      <ion-button routerLink="/personajes">
+        <ion-icon slot="start" name="arrow-forward"></ion-icon>
+        siguiente
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-footer>
+
+
+<style>
+.background-image {
+  --background: url('assets/img/GAME.png') no-repeat center center / cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-container {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.description-text {
+  color: white; /* Texto en blanco */
+  font-size: 18px;
+}
+
+
+
+
+</style>
+
+
